@@ -33,7 +33,7 @@ const add = () => {
   count.value++
 }
 
-
+// 通过defineExpose暴露出去, 在父组件中可以通过ref.value调用
 defineExpose({
   add,
   count
@@ -42,25 +42,44 @@ defineExpose({
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>{{ num }}</h3>
-    <h3>{{ year }}</h3>
-    <div>
-      <h3>{{ obj.name }}</h3>
-      <h3>{{ obj.age }}</h3>
-      <button @click="add">count is: {{ count }}</button>
-      {{ double }}
+    <div class="greetings">
+      欢迎来到 <span>Vue3Promote</span> 的世界
     </div>
-  </div>
+    <div class="author">
+      --{{ msg }}
+    </div>
 </template>
 
 <style scoped lang="scss">
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .greetings {
-  color: $color;
-
-  .green {
-    color: $main;
+  width: 100%;
+  font-size: 80px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30vh;
+  span {
+    color: #2c5db3;
   }
 }
+
+.author{
+  width: 100%;
+  font-size: 80px;
+  color: #000;
+  font-weight: 600;
+  text-align: right;
+  margin-top: 10vh;
+  padding: 10px;
+  box-sizing: border-box;
+  span {
+    color: #2c5db3;
+  }
+}
+
 </style>

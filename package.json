@@ -11,7 +11,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "pinia": "^2.0.32",
+    "postcss-px-to-viewport-8-plugin": "^1.2.2",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue';
-import { ref, watch,watchEffect } from 'vue';
+import HelloWorld from '@/components/HelloWorld.vue'
+import { ref, watch, watchEffect } from 'vue';
 
-const helloRef = ref<InstanceType<typeof HelloWorld> | null>(null)
+const helloRef = ref<InstanceType<typeof HelloWorld>>()
 const btn = () => {
   helloRef.value?.add()
 }
 
-
+// const add = ref([] window as any)
 const val = ref<number>(0)
 /* watchEffect((onInvalidate) => {
   console.log(val.value);
@@ -19,14 +19,13 @@ setTimeout(() => {
   val.value = 100
 }, 2000); */
 
+
 </script>
 <template>
   <div class="home">
-    <h1>{{ val }}</h1>
-    <button @click="btn">点击</button>
-    <HelloWorld  ref="helloRef"  msg="Welcome to Your Vue.js" :num="123" />
+    <HelloWorld ref="helloRef"  msg="暖心" :num="666" />
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 </style>

@@ -5,8 +5,21 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/home/index.vue')
-    }
+      meta:{
+        title:'首页',
+        transition:'animate__zoomInDown'
+      },
+      component: () => import('@/views/home.vue')
+    },
+    {
+      path: '/slideIn',
+      name: 'slideIn',
+      meta:{
+        title:'滑入',
+        transition:'animate__fadeInLeft'
+      },
+      component: () => import('@/views/slideIn.vue')
+    },
   ]
 })
 
