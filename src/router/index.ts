@@ -7,7 +7,7 @@ const router = createRouter({
       name: 'home',
       meta:{
         title:'首页',
-        transition:'animate__zoomInDown'
+        transition:'animate__lightSpeedInLeft'
       },
       component: () => import('@/views/home.vue')
     },
