@@ -4,12 +4,12 @@ import { useRouter} from 'vue-router';
 const router = useRouter()
 
 const taskList = reactive([
-   {
-      id:1,
-      name:'平滑上升',
-      status: '已完成',
-      path: '/slideIn'
-   },
+  {
+    id:1,
+    name:'平滑上升',
+    status: '已完成',
+    path: '/slideIn'
+  },
 ])
 
 const goTo = (path: string) => {
